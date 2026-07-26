@@ -113,16 +113,14 @@ elif st.session_state.page == "module":
     
     st.markdown("""
     <style>
-    .center-container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; text-align: center; }
-    h1 { font-size: 50px !important; margin-bottom: 40px !important; text-align: center; }
-    .big-text { font-size: 32px !important; font-weight: bold; margin-bottom: 50px; text-align: center; line-height: 1.5; }
+    h1 { font-size: 50px !important; margin-top: 40px !important; margin-bottom: 30px !important; text-align: center; }
+    .big-text { font-size: 32px !important; font-weight: bold; margin-bottom: 40px; text-align: center; line-height: 1.5; }
     div[data-testid="stButton"] > button { height: 80px; margin-bottom: 15px; }
     div[data-testid="stButton"] > button p { font-size: 24px !important; font-weight: bold !important; }
     </style>
     """, unsafe_allow_html=True)
     
     st.markdown(f"<h1>{mod}</h1>", unsafe_allow_html=True)
-    st.markdown("<div class='center-container'>", unsafe_allow_html=True)
     
     pre_reqs = {
         "추론통계": "'기술통계'",
@@ -263,5 +261,3 @@ elif st.session_state.page == "module":
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
             if st.button("메인으로 돌아가기", use_container_width=True): go_main()
-
-    st.markdown("</div>", unsafe_allow_html=True)
