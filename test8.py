@@ -62,7 +62,7 @@ def go_module(module_name):
 if st.session_state.page == "main":
     st.markdown(f"<h1>{st.session_state.user}님의 GDX 아카데미 입니다.</h2>", unsafe_allow_html=True)
     
-    st.markdown("### 🏆 배지 획득 현황")
+    st.markdown("## 🏆 배지 획득 현황")
     st.markdown("<hr style='margin:0; padding-bottom:15px;'/>", unsafe_allow_html=True)
     
     modules = list(badge_data.keys())
@@ -76,7 +76,7 @@ if st.session_state.page == "main":
 
     st.markdown("<br><br>", unsafe_allow_html=True)
     
-    st.markdown("### 📚 수강 신청 (과정 선택)")
+    st.markdown("## 📚 수강 신청 (과정 선택)")
     st.markdown("<hr style='margin:0; padding-bottom:20px;'/>", unsafe_allow_html=True)
     
     box_style = """
