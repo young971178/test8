@@ -45,12 +45,7 @@ def get_badge_svg(level, current_level):
         stroke = "#ccc"
         stroke_dasharray = "2,2"
 
-    return f'''
-    <svg width="24" height="24" viewBox="0 0 100 100">
-        <path d="M50 10 L90 80 L10 80 Z" fill="{color}" stroke="{stroke}" stroke-dasharray="{stroke_dasharray}" stroke-width="4" />
-        <circle cx="50" cy="55" r="15" fill="white" />
-    </svg>
-    '''
+    return f'<svg width="24" height="24" viewBox="0 0 100 100" style="margin-right:2px;"><path d="M50 10 L90 80 L10 80 Z" fill="{color}" stroke="{stroke}" stroke-dasharray="{stroke_dasharray}" stroke-width="4" /><circle cx="50" cy="55" r="15" fill="white" /></svg>'
 
 def go_main():
     st.session_state.page = "main"
@@ -78,7 +73,7 @@ if st.session_state.page == "main":
         with cols[i % 3]:
             st.markdown(f"**{mod}**")
             svgs = [get_badge_svg(lvl, user_level) for lvl in badge_levels[1:]]
-            st.markdown(f"<div style='display:flex; gap:5px;'>{''.join(svgs)}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='display:flex; align-items:center;'>{''.join(svgs)}</div>", unsafe_allow_html=True)
             st.write("")
 
     st.markdown("<br><br><br>", unsafe_allow_html=True)
