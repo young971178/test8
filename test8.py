@@ -82,7 +82,7 @@ if st.session_state.page == "main":
     box_style = """
     <style>
     div.stButton > button {
-        width: 100%; height: 120px; font-size: 26px !important; font-weight: bold;
+        width: 100%; height: 120px; font-size: 28px !important; font-weight: bold;
         background-color: #f0f2f6; border: 2px solid #d0d4dc; border-radius: 10px;
         white-space: normal; word-break: keep-all; line-height: 1.3;
     }
