@@ -81,13 +81,19 @@ if st.session_state.page == "main":
     
     box_style = """
     <style>
-    div.stButton > button {
-        width: 100%; height: 120px; font-size: 28px !important; font-weight: bold;
+    div[data-testid="stButton"] > button {
+        height: 120px;
         background-color: #f0f2f6; border: 2px solid #d0d4dc; border-radius: 10px;
+    }
+    div[data-testid="stButton"] > button p {
+        font-size: 28px !important; font-weight: bold !important;
         white-space: normal; word-break: keep-all; line-height: 1.3;
     }
-    div.stButton > button:hover {
-        background-color: #e0e4eb; border-color: #0056b3; color: #0056b3;
+    div[data-testid="stButton"] > button:hover {
+        background-color: #e0e4eb; border-color: #0056b3;
+    }
+    div[data-testid="stButton"] > button:hover p {
+        color: #0056b3;
     }
     </style>
     """
@@ -99,7 +105,7 @@ if st.session_state.page == "main":
             if i + j < len(modules):
                 mod = modules[i+j]
                 with btn_cols[j]:
-                    if st.button(mod, key=f"btn_{mod}"):
+                    if st.button(mod, key=f"btn_{mod}", use_container_width=True):
                         go_module(mod)
 
 elif st.session_state.page == "module":
@@ -110,7 +116,8 @@ elif st.session_state.page == "module":
     .center-container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; text-align: center; }
     h1 { font-size: 50px !important; margin-bottom: 40px !important; text-align: center; }
     .big-text { font-size: 32px !important; font-weight: bold; margin-bottom: 50px; text-align: center; line-height: 1.5; }
-    div.stButton > button { height: 80px; font-size: 24px !important; margin-bottom: 15px; }
+    div[data-testid="stButton"] > button { height: 80px; margin-bottom: 15px; }
+    div[data-testid="stButton"] > button p { font-size: 24px !important; font-weight: bold !important; }
     </style>
     """, unsafe_allow_html=True)
     
