@@ -228,7 +228,7 @@ elif st.session_state.page == "module":
                 "AI Automation": "휴넷에서 제공되는 Streamlit 마스터 과정",
                 "시각화": "휴넷에서 제공되는 Tableau 마스터 과정"
             }
-            st.markdown(f"<div class='big-text'>{mod} 온라인 과정은 {msgs[mod]} 에 해당합니다.<br><br>수강신청 하시겠습니까?</div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='big-text'>{mod} 온라인 과정은 {msgs[mod]} 에 해당합니다.<br><br> 온라인 교육과정이 종료된 후 한 달 이내에 두 번의 평가에 응시할 수 있습니다. <br><br>수강신청 하시겠습니까?</div>", unsafe_allow_html=True)
             col1, col2, col3 = st.columns([1, 2, 1])
             with col2:
                 if st.button("예", use_container_width=True): 
