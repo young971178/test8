@@ -147,10 +147,10 @@ elif st.session_state.page == "module":
                 
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
-            if st.button("예", use_container_width=True): 
+            if st.button("강의유형 선택하기", use_container_width=True): 
                 st.session_state.step = 3 if mod == "구조적문제해결방법론" else 2
                 st.rerun()
-            if st.button("아니오", use_container_width=True): 
+            if st.button("선행학습 보러가기", use_container_width=True): 
                 go_main()
 
     elif st.session_state.step == 2:
