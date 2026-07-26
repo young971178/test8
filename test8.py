@@ -239,7 +239,7 @@ elif st.session_state.page == "module":
                     st.rerun()
 
     elif st.session_state.step == 4:
-        st.markdown("<div class='big-text'>수강신청하시겠습니까?</div>", unsafe_allow_html=True)
+        st.markdown("<div class='big-text'>오프라인 교육과정은 강사가 제시하는 실습 과제를 수행하여 성취도를 평가합니다.<Br><Br>수강신청하시겠습니까?</div>", unsafe_allow_html=True)
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
             if st.button("예", use_container_width=True): 
