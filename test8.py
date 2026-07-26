@@ -60,7 +60,7 @@ def go_module(module_name):
     st.rerun()
 
 if st.session_state.page == "main":
-    st.markdown(f"<h2>{st.session_state.user}님의 GDX 아카데미 입니다.</h2>", unsafe_allow_html=True)
+    st.markdown(f"<h3>{st.session_state.user}님의 GDX 아카데미 입니다.</h2>", unsafe_allow_html=True)
     
     st.markdown("### 🏆 배지 획득 현황")
     st.markdown("<hr style='margin:0; padding-bottom:15px;'/>", unsafe_allow_html=True)
